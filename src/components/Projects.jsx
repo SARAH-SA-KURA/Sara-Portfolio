@@ -31,6 +31,18 @@ const projects = [
     code: `${GITHUB}/Focus-Timer`,
   },
   {
+    name: 'OFPPT Study Platform',
+    kind: 'React + Vite study resource site',
+    summary:
+      'A study site for OFPPT students: free EFM exam papers as PDFs, the filieres listing, ' +
+      'and a module browser with a detail page per module. React Router drives dedicated ' +
+      'routes for the React and Laravel exam archives, and each one publishes its own French ' +
+      'title and description through react-helmet-async so the pages surface in search.',
+    tags: ['React', 'Vite', 'React Router', 'react-helmet-async', 'Netlify'],
+    live: 'https://learnexapp.netlify.app',
+    code: `${GITHUB}/Study-app-sara-abdelwahid`,
+  },
+  {
     name: 'School Management',
     kind: 'Laravel REST API + TypeScript client',
     summary:

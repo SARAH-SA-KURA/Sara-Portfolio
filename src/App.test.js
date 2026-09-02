@@ -19,7 +19,9 @@ test('renders every section the navbar links to, exactly once each', () => {
 });
 
 describe('projects section', () => {
-  const projectNames = ['TaskFlow', 'Focus Timer', 'School Management', 'Medicines Website'];
+  const projectNames = [
+    'TaskFlow', 'Focus Timer', 'OFPPT Study Platform', 'School Management', 'Medicines Website',
+  ];
 
   test.each(projectNames)('%s has a card with a working code link', (name) => {
     const { container } = render(<App />);
@@ -41,6 +43,7 @@ describe('projects section', () => {
     expect(demos.map((a) => a.getAttribute('href'))).toEqual([
       'https://taskflow-web-topaz.vercel.app',
       'https://focus-timer-delta-six.vercel.app',
+      'https://learnexapp.netlify.app',
     ]);
   });
 
