@@ -13,7 +13,7 @@ test('has exactly one h1 on the page', () => {
 
 test('renders every section the navbar links to, exactly once each', () => {
   const { container } = render(<App />);
-  ['home', 'about', 'education', 'skills', 'project', 'contact'].forEach((id) => {
+  ['home', 'about', 'education', 'experience', 'skills', 'project', 'contact'].forEach((id) => {
     expect(container.querySelectorAll(`#${id}`)).toHaveLength(1);
   });
 });
@@ -67,8 +67,9 @@ test('education lists each qualification with its period', () => {
   const edu = within(container.querySelector('#education'));
 
   expect(edu.getByRole('heading', { name: /digital development/i })).toBeInTheDocument();
-  expect(edu.getByRole('heading', { name: /audiovisual studies/i })).toBeInTheDocument();
-  expect(container.querySelectorAll('#education .edu-entry')).toHaveLength(2);
+  expect(edu.getByRole('heading', { name: /audiovisual/i })).toBeInTheDocument();
+  expect(edu.getByRole('heading', { name: /baccalaureate/i })).toBeInTheDocument();
+  expect(container.querySelectorAll('#education .edu-entry')).toHaveLength(3);
   // The Digital Development course is finished and earned a Bac+2; nothing is
   // in progress, so the badge now marks the qualification rather than "Now".
   expect(container.querySelectorAll('#education .edu-entry.current')).toHaveLength(0);
@@ -91,4 +92,15 @@ test('the send button submits the contact form', () => {
   const button = screen.getByRole('button', { name: /send message/i });
   expect(button).toHaveAttribute('type', 'submit');
   expect(button.closest('form')).toBe(container.querySelector('#contact-form'));
+});
+
+test('experience lists the internship with what it involved', () => {
+  const { container } = render(<App />);
+  const work = within(container.querySelector('#experience'));
+
+  expect(work.getByRole('heading', { name: /full-stack developer/i })).toBeInTheDocument();
+  expect(work.getByText(/AdSpace/)).toBeInTheDocument();
+  // The responsibilities are the substance of the entry; a role with no
+  // bullets would render as an empty card without failing anything else.
+  expect(container.querySelectorAll('#experience .work-points li').length).toBeGreaterThan(0);
 });

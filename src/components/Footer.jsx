@@ -11,6 +11,7 @@ const QUICK_LINKS = [
   { label: 'Home', href: '#home' },
   { label: 'About Me', href: '#about' },
   { label: 'Education', href: '#education' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#project' },
   { label: 'Contact', href: '#contact' },

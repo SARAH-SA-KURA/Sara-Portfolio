@@ -12,6 +12,9 @@ export default function Navbar({ activeSection }) {
       <a href="#education" className={activeSection === 'education' ? 'active' : ''} aria-label="Education">
         <i className="fas fa-graduation-cap"></i>
       </a>
+      <a href="#experience" className={activeSection === 'experience' ? 'active' : ''} aria-label="Experience">
+        <i className="fas fa-briefcase"></i>
+      </a>
       <a href="#skills" className={activeSection === 'skills' ? 'active' : ''} aria-label="Skills">
         <i className="fas fa-check-circle"></i>
       </a>

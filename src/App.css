@@ -1523,6 +1523,114 @@ body.is-loading {
   }
 }
 
+/* ------------------------------------------------------------- Experience
+
+   A fourth shape again: About is two columns, Education a bordered index,
+   Projects stadium rows. This is a bordered card with a rule under the head
+   and the responsibilities as a marked list.
+   -------------------------------------------------------------------------- */
+
+.work-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: min(900px, 92vw);
+}
+
+.work-entry + .work-entry { margin-top: clamp(1rem, 3vh, 1.75rem); }
+
+.work-card {
+  padding: clamp(1.4rem, 3.5vw, 2.25rem);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background-color: var(--surface);
+  transform: perspective(1100px)
+             rotateX(var(--tilt-x, 0deg))
+             rotateY(var(--tilt-y, 0deg));
+  transition: transform 0.28s ease-out, border-color 0.35s ease;
+}
+
+.work-entry:hover .work-card { border-color: rgba(245, 9, 143, 0.5); }
+
+.work-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+}
+
+.work-card h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(1.3rem, 3vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.work-kind {
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background-color: var(--pink);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.work-company {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--pink);
+}
+
+/* The product description rides along with the company name but must not
+   compete with it. */
+.work-context {
+  font-weight: 400;
+  color: var(--text-dim);
+}
+
+.work-period {
+  margin: 0.15rem 0 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.work-points {
+  margin: clamp(0.9rem, 2vh, 1.25rem) 0 0;
+  padding: clamp(0.9rem, 2vh, 1.25rem) 0 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.work-points li {
+  position: relative;
+  padding-left: 1.4rem;
+  line-height: 1.65;
+  color: var(--text-dim);
+}
+
+/* A drawn marker rather than a list bullet, so it can carry the accent colour
+   and sit on the first line's optical centre. */
+.work-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--pink);
+}
+
 /* ---------------------------------------------------------------- Footer
 
    Deliberately NOT a <section>: the section rule carries min-height:100vh and

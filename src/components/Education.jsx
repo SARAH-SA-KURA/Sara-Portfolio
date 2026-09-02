@@ -6,20 +6,27 @@ import useTilt from '../hooks/useTilt';
 const education = [
   {
     qualification: 'Digital Development',
-    place: 'OFPPT',
+    place: 'ISTA Ben Guerir (OFPPT)',
     period: '2024 — 2026',
     credential: 'Bac+2',
     detail:
-      'Completed. Fullstack web development: JavaScript and TypeScript, PHP and Laravel, ' +
-      'React, and relational databases. Coursework was project-led, built to written specifications.',
+      'Specialized Technician Diploma, Full-Stack track. Agile methodology, database ' +
+      'management, front-end with React and back-end with NestJS. Coursework was project-led, ' +
+      'built to written specifications.',
   },
   {
-    qualification: 'Audiovisual Studies',
-    place: 'Prior training',
-    period: '2021 — 2023',
+    qualification: 'Audiovisual & Film',
+    place: 'Centre Multimédia, Ben Guerir',
+    period: '2023 — 2024',
     detail:
-      'Two years in visual production — composition, editing and visual storytelling. ' +
+      'Vocational diploma in visual production — composition, editing and visual storytelling. ' +
       'It is where the design side of how I build interfaces comes from.',
+  },
+  {
+    qualification: 'Baccalaureate',
+    place: 'Lycée Technique Rhamna',
+    period: '2023',
+    detail: 'Physical Sciences track.',
   },
 ];
 
