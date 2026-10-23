@@ -14,7 +14,8 @@ const About = () => {
           <p>
             I’m a passionate and creative developer. I hold a Bac+2 diploma in Digital Development
             from OFPPT, and with a background in audiovisual studies, I bring a unique blend of
-            technical knowledge and artistic vision to everything I do.
+            technical knowledge and artistic vision to everything I do. I&apos;m now studying for a
+            Licence in Computer Engineering at High-Tech Rabat.
           </p>
           <p>
             I enjoy turning ideas into real, functional digital experiences — whether that means building

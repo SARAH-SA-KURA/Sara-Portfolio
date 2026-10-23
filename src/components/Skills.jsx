@@ -5,9 +5,9 @@ import MarqueeBand from './MarqueeBand';
 // and it reads oddly next to a hero that says Fullstack Developer.
 // Each row scrolls on its own, alternating direction, at its own speed.
 const skillGroups = [
-  { title: 'Languages', speed: 30, items: ['JavaScript', 'TypeScript', 'PHP', 'Python', 'SQL'] },
+  { title: 'Languages', speed: 30, items: ['JavaScript', 'TypeScript', 'PHP', 'Java', 'Python', 'SQL'] },
   { title: 'Frontend', speed: 24, items: ['React', 'HTML5', 'CSS3', 'Bootstrap', 'Tailwind CSS', 'Vite', 'Electron'] },
-  { title: 'Backend & Data', speed: 34, items: ['Node.js', 'Express', 'NestJS', 'Laravel', 'MySQL', 'PostgreSQL (pgAdmin)', 'Drizzle ORM', 'REST APIs'] },
+  { title: 'Backend & Data', speed: 34, items: ['Node.js', 'Express', 'NestJS', 'Laravel', 'MySQL', 'PostgreSQL (pgAdmin)', 'Oracle', 'Drizzle ORM', 'REST APIs'] },
   { title: 'Tools', speed: 27, items: ['Git & GitHub', 'Figma', 'Vercel', 'Render', 'Clerk', 'Claude API'] },
 ];
 

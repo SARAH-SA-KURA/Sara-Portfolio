@@ -2,8 +2,18 @@ import React from 'react';
 import useTilt from '../hooks/useTilt';
 
 // Newest first. `credential` marks a finished course that earned a
-// qualification; nothing is in progress any more.
+// qualification; `ongoing` marks one still being studied.
 const education = [
+  {
+    qualification: 'Licence in Computer Engineering (Génie Informatique)',
+    place: 'High-Tech Rabat',
+    link: 'https://www.hightech.edu/',
+    period: '2026 — 2027',
+    ongoing: true,
+    detail:
+      'One-year licence, studied remotely with evening classes, so my days stay free for an ' +
+      'internship or a job. First semester covers Java and Oracle databases.',
+  },
   {
     qualification: 'Digital Development',
     place: 'ISTA Ben Guerir (OFPPT)',
@@ -51,11 +61,16 @@ export default function Education() {
               <p className="edu-period">
                 {entry.period}
                 {entry.credential && <span className="edu-now">{entry.credential}</span>}
+                {entry.ongoing && <span className="edu-now ongoing">In progress</span>}
               </p>
 
               <div className="edu-body">
                 <h3>{entry.qualification}</h3>
-                <p className="edu-place">{entry.place}</p>
+                <p className="edu-place">
+                  {entry.link ? (
+                    <a href={entry.link} target="_blank" rel="noreferrer">{entry.place}</a>
+                  ) : entry.place}
+                </p>
                 <p className="edu-detail">{entry.detail}</p>
               </div>
             </div>

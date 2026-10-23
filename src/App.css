@@ -916,6 +916,19 @@ body.is-loading {
 
 /* The qualification earned. Static, not pulsing: a pulse reads as "in
    progress", which is the opposite of what this badge now means. */
+.edu-now.ongoing {
+  background-color: transparent;
+  border: 1px solid var(--pink);
+  color: var(--pink);
+  box-shadow: none;
+}
+
+.edu-place a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .edu-now {
   padding: 0.2rem 0.6rem;
   border-radius: 999px;

@@ -13,7 +13,7 @@ const DISPLAY_WORD = 'DEVELOPER';
 // Projects and Skills sections; nothing here is invented.
 const STATS = [
   { value: '7', label: 'Projects built' },
-  { value: '26', label: 'Technologies' },
+  { value: '28', label: 'Technologies' },
   { value: 'Bac+2', label: 'OFPPT diploma' },
 ];
 
