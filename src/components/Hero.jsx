@@ -12,8 +12,8 @@ const DISPLAY_WORD = 'DEVELOPER';
 // Real, checkable figures. Projects and technologies are counted from the
 // Projects and Skills sections; nothing here is invented.
 const STATS = [
-  { value: '5', label: 'Projects built' },
-  { value: '20', label: 'Technologies' },
+  { value: '7', label: 'Projects built' },
+  { value: '26', label: 'Technologies' },
   { value: 'Bac+2', label: 'OFPPT diploma' },
 ];
 

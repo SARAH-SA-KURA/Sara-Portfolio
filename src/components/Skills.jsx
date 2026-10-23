@@ -6,9 +6,9 @@ import MarqueeBand from './MarqueeBand';
 // Each row scrolls on its own, alternating direction, at its own speed.
 const skillGroups = [
   { title: 'Languages', speed: 30, items: ['JavaScript', 'TypeScript', 'PHP', 'Python', 'SQL'] },
-  { title: 'Frontend', speed: 24, items: ['React', 'HTML5', 'CSS3', 'Bootstrap', 'Vite'] },
-  { title: 'Backend & Data', speed: 34, items: ['Node.js', 'Express', 'NestJS', 'Laravel', 'MySQL', 'PostgreSQL (pgAdmin)', 'REST APIs'] },
-  { title: 'Tools', speed: 27, items: ['Git & GitHub', 'Figma', 'Vercel'] },
+  { title: 'Frontend', speed: 24, items: ['React', 'HTML5', 'CSS3', 'Bootstrap', 'Tailwind CSS', 'Vite', 'Electron'] },
+  { title: 'Backend & Data', speed: 34, items: ['Node.js', 'Express', 'NestJS', 'Laravel', 'MySQL', 'PostgreSQL (pgAdmin)', 'Drizzle ORM', 'REST APIs'] },
+  { title: 'Tools', speed: 27, items: ['Git & GitHub', 'Figma', 'Vercel', 'Render', 'Clerk', 'Claude API'] },
 ];
 
 // Identical runs scrolled by exactly one run's width, so the loop is seamless.
