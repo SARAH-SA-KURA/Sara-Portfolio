@@ -1291,6 +1291,17 @@ body.is-loading {
   color: var(--pink-soft);
 }
 
+.project-link.private {
+  opacity: 0.6;
+  border-style: dashed;
+  cursor: default;
+}
+
+.project-link.private:hover {
+  background-color: transparent;
+  color: var(--pink-pale);
+}
+
 .project-more { margin-top: clamp(1rem, 3vh, 2rem); }
 
 .link-icon {

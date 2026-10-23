@@ -5,7 +5,29 @@ const GITHUB = 'https://github.com/SARAH-SA-KURA';
 
 // Adding a project is a matter of appending one entry here.
 // `live` is optional - only set it when there is a real deployed app behind it.
+// `code` is optional too - leave it out for private repos and a label shows instead.
 const projects = [
+  {
+    name: 'CenterNest',
+    kind: 'Web app + Electron desktop app',
+    summary:
+      'Management software for tutoring and training centres: enrolments, monthly fees, ' +
+      'arrears, attendance, timetables and teacher pay in one system. It started as an ' +
+      'Electron desktop app, then became a web app with its own landing page. Both editions ' +
+      'build from one React codebase on top of a Laravel API.',
+    tags: ['React', 'TypeScript', 'Laravel', 'Electron', 'Tailwind CSS', 'REST API'],
+    live: 'https://getcenternest.com',
+  },
+  {
+    name: 'Nimbly',
+    kind: 'Fullstack SaaS CV builder',
+    summary:
+      'A CV builder with Free and Pro plans, in English and French. Users write CVs in a live ' +
+      'editor, export them to PDF, import an existing CV, fix them with AI and generate cover ' +
+      'letters. Accounts, CVs and plan limits are handled on the server.',
+    tags: ['React', 'TypeScript', 'Express', 'PostgreSQL', 'Drizzle', 'Clerk', 'Claude API'],
+    live: 'https://nimbly-90jd.onrender.com',
+  },
   {
     name: 'TaskFlow',
     kind: 'Fullstack web app',
@@ -108,10 +130,14 @@ export default function Projects() {
                   Live demo <ArrowIcon />
                 </a>
               )}
-              <a className="project-link" href={project.code}
-                 target="_blank" rel="noreferrer">
-                View code <ArrowIcon />
-              </a>
+              {project.code ? (
+                <a className="project-link" href={project.code}
+                   target="_blank" rel="noreferrer">
+                  View code <ArrowIcon />
+                </a>
+              ) : (
+                <span className="project-link private">Private repo</span>
+              )}
             </div>
           </li>
         ))}
